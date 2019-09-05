@@ -1,0 +1,39 @@
+body {
+box-sizing: border-box;
+margin: 0;
+background-image:linear-gradient(to right, gray, lightgray, gray);
+}
+
+.header {
+display: flex;
+
+min-height: 100px;
+}
+
+..header__logo {
+	
+}
+
+.header__nav {
+	width: 60%;
+}
+
+.header__interactive {
+width: 20%;
+text-align: right
+}
+.header__logo img{
+width: 210px;	
+}
+
+.header__nav {
+display: flex;
+}
+
+.header__link:not(:last-child) {
+	margin-right: 20px;
+}
+
+[class*=header__]:not(.header__link) {
+	flex-grow: 1;
+}
