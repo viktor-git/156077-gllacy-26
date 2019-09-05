@@ -1,6 +1,5 @@
 body {
 box-sizing: border-box;
-margin: 0;
 background-image:linear-gradient(to right, gray, lightgray, gray);
 }
 
@@ -20,20 +19,39 @@ min-height: 100px;
 
 .header__interactive {
 width: 20%;
-text-align: right
+text-align: left;
 }
 .header__logo img{
 width: 210px;	
 }
 
-.header__nav {
+.header__nav .nav__menu{
 display: flex;
+list-style: none;
 }
 
-.header__link:not(:last-child) {
+.nav__menu li:not(:last-child) {
 	margin-right: 20px;
 }
 
-[class*=header__]:not(.header__link) {
+[class*=header__] {
 	flex-grow: 1;
+}
+
+.nav__submenu {
+	display: none;
+	list-style: none;
+	padding: 10px;
+	background-color: whitesmoke;
+	position: absolute;
+	min-width: 150px;
+	transform: translateY(5px);
+}
+
+.nav__menu li:first-child:hover .nav__submenu  {
+	display: block;
+}
+
+.nav__menu li:first-child {
+	position: relative;
 }
