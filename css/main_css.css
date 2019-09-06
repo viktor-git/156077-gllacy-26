@@ -1,6 +1,8 @@
 body {
 box-sizing: border-box;
-background-image:linear-gradient(to right, gray, lightgray, gray);
+background-image:linear-gradient(to right, #6e8c85, #9cd0ba, #6e8c85);
+font-family: 'Roboto', 'Arial', sans-serif;
+font-size: 14px;
 }
 
 .header {
@@ -31,7 +33,7 @@ list-style: none;
 }
 
 .nav__menu li:not(:last-child) {
-	margin-right: 20px;
+	margin-right: 30px;
 }
 
 [class*=header__] {
@@ -54,4 +56,12 @@ list-style: none;
 
 .nav__menu li:first-child {
 	position: relative;
+}
+
+.nav__link {
+
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(189, 253, 253, 0.5);
+	color: white;
 }
