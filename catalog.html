@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <script async src=".\js\js_main.js"></script>
-    <link rel="stylesheet" href=".\css\main_css.css" type="text/css"/>
+    <script async src="./js/js_main.js"></script>
+    <link rel="stylesheet" href="./css/main_css.css" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 
   </head>
@@ -14,7 +14,7 @@
 
 <header class="header">
 
-	<div class="header__logo"><a href="./index.html"><img src="" ></a></div>
+	<div class="header__logo"><a href="./index.html"><img src="" alt="Гототип Глэйси"></a></div>
 
 	<nav class="header__nav">
 
@@ -74,38 +74,37 @@
 		
 		<form class="filter">
 
-			<label class="sort">
-
+			<div class="sort">
 				<span>Сортировка:</span>
 				<select>
 					<option>По популярности</option>	
 					<option>По ворастанию цены</option>
 					<option>По убыванию цены</option>
 				</select>
+			</div>	
 
-			</label>	
+			<div class="price__filter">
+				<label for="price__range">Цена: 100 руб. - 500 руб.</label>
+				<input type="range" min="100" max="500" step="5" id="price__range">
+			</div>	
 
-			<label class="price__filter">
-				<span>Цена: 100 руб. - 500 руб.</span>
-				<input type="range" min="100" max="500" step="5" name="">
-			</label>	
+			<div class="fatness__filter">
+				<span>Жирность:</span>
+				<input type="radio" name="fatness__value" id="fat__val-1"><label for="fat__val-1">0%</label>
+				<input type="radio" name="fatness__value" id="fat__val-2"><label for="fat__val-2">до 10%</label>
+				<input type="radio" name="fatness__value" id="fat__val-3"><label for="fat__val-3">до 30%</label>
+				<input type="radio" name="fatness__value" id="fat__val-4"><label for="fat__val-4">свыше 30%</label>
+			</div>
 
-			<label class="fatness__filter">
-				Жирность:
-				<input type="radio" name="fatness__value"><span>0%</span>
-				<input type="radio" name="fatness__value"><span>до 10%</span>
-				<input type="radio" name="fatness__value"><span>до 30%</span>
-				<input type="radio" name="fatness__value"><span>свыше 30%</span>
-			</label>
 
-			<label class="filler__filter">
-				Наполнители:
-				<input type="checkbox" name="filler__value"><span>шоколадные</span>
-				<input type="checkbox" name="filler__value"><span>сахарные присыпки</span>
-				<input type="checkbox" name="filler__value"><span>фрукты</span>
-				<input type="checkbox" name="filler__value"><span>сиропы</span>
-				<input type="checkbox" name="filler__value"><span>джемы</span>
-			</label>
+			<div class="filler__filter">
+				<span>Наполнители:</span>
+				<input type="checkbox" name="filler__value" id="filler_value-1"><label for="filler__value-1">шоколадные</label>
+				<input type="checkbox" name="filler__value" id="filler_value-2"><label for="filler__value-2">сахарные присыпки</label>
+				<input type="checkbox" name="filler__value" id="filler_value-3"><label for="filler__value-3">фрукты</label>
+				<input type="checkbox" name="filler__value" id="filler_value-4"><label for="filler__value-4">сиропы</label>
+				<input type="checkbox" name="filler__value" id="filler_value-5"><label for="filler__value-5">джемы</label>
+			</div>
 
 			<input class="apply__filter" type="submit" value="Применить">
 		
