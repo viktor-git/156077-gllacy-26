@@ -1,13 +1,15 @@
+/*
 body {
 box-sizing: border-box;
 background-image:linear-gradient(to right, #6e8c85, #9cd0ba, #6e8c85);
 font-family: 'Roboto', 'Arial', sans-serif;
 font-size: 14px;
+margin: 0 auto;
+width: 80%;
 }
 
 .header {
 display: flex;
-
 min-height: 100px;
 }
 

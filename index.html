@@ -14,18 +14,21 @@
 
 <header class="header">
 
-	<div class="header__logo"><img src=".\img\logo.png" ></a></div>
+	<div class="header__logo"><a href="./index.html"><img src="" ></a></div>
 
 	<nav class="header__nav">
 
 		<ul class="nav__menu">
-			<li><a href="#" class="nav__link">Каталог</a>
-		<ul class="nav__submenu">
-			<li><a href=""></a>Раздел 1</li>
-			<li><a href=""></a>Раздел 1</li>
-			<li><a href=""></a>Раздел 1</li>
-			<li><a href=""></a>Раздел 1</li>
-		</ul></li>
+			<li>
+				<a href="/catalog.html" class="nav__link">Каталог</a>
+				<ul class="nav__submenu">
+					<li><a href=""></a>Новинки</li>
+					<li><a href="/catalog.html"></a>Сливочное</li>
+					<li><a href=""></a>Щербеты</li>
+					<li><a href=""></a>Фруктовый лед</li>
+					<li><a href=""></a>Мелорин</li>
+				</ul>
+			</li>
 			<li><a href="#" class="nav__link">Доставка и оплата</a></li>
 			<li><a href="#" class="nav__link">О компании</a></li>
 		</ul>
@@ -35,9 +38,9 @@
     <div class="header__interactive">
 
 		<div class="header__buttons">
-			<button>Поиск</button>
-			<button>Вход</button>
-			<button>Пусто</button>
+			<div class="search">Поиск</div>
+			<div class="login">Вход</div>
+			<div class="cart">Пусто</div>
 		</div>		
 
 		<div class="header__contacts">
@@ -49,29 +52,36 @@
 
 </header>
 
-<main>
+<main class="main">
 
 	<section class="slider__main"> 
 
-		<div class="slider__images">
+		<div class="slider__obj">
  			<img src="" alt="Вкуснейшее мороженное">
- 			<img src="" alt="Вкуснейшее мороженное">
- 			<img src="" alt="Вкуснейшее мороженное">
+ 			<div class="slider__title">Крем-брюле и пломбир с малиновым джемом</div>
 		</div>
 
-		<div class="slider__title">Крем-блюде и пломбир с малиновым джемом</div>
+		<div class="slider__obj">
+ 			<img src="" alt="Вкуснейшее мороженное">
+ 			<div class="slider__title">Шоколадный пломбир и лимонный сорбет</div>
+		</div>
+
+		<div class="slider__obj">
+ 			<img src="" alt="Вкуснейшее мороженное">
+ 			<div class="slider__title">Пломбир с помадкой и клубничный щербет</div>
+		</div>
 
 		<a type="button">Дайте оба</a>  
 
 		<label>
-			<input type="checkbox" name="slider__scroll">  
-			<input type="checkbox" name="slider__scroll">  
-			<input type="checkbox" name="slider__scroll">   
+			<input type="radio" name="slider__scroll">  
+			<input type="radio" name="slider__scroll">  
+			<input type="radio" name="slider__scroll">   
 		</label>
 
 	</section> 
 
-<h1>Интерент-магазин мороженного Глэйси</h1>
+<h1 hidden>Интерент-магазин мороженного Глэйси</h1>
 
 	<section class="special__offers">
 
@@ -90,20 +100,21 @@
 	</section>
 
 	<section class="hit__items">
+
+		<h2 hidden>Хиты продаж</h2>
+
 		<div class="hit__item">
 
 			<img class="hit__item__image" src="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-			<div class="item__price">310&#8381;<span>/кг</span></div>
+			<div class="item__price">310 &#8381;<span>/кг</span></div>
 			<h3 class="item__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
 
 		</div>
 
 		<div class="hit__item">
 		
-		<h2>Хиты продаж</h2>
-
 			<img class="hit__item__image" src="" alt="Сливочно-кофейное с кусочками шоколада">
-			<div class="item__price">380&#8381;<span>/кг</span></div>
+			<div class="item__price">380 &#8381;<span>/кг</span></div>
 			<h3 class="item__title">Сливочно-кофейное с кусочками шоколада</h3>
 
 		</div>
@@ -111,7 +122,7 @@
 		<div class="hit__item">
 
 			<img class="hit__item__image" src="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-			<div class="item__price">355&#8381;<span>/кг</span></div>
+			<div class="item__price">355 &#8381;<span>/кг</span></div>
 			<h3 class="item__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
 
 		</div>
@@ -119,55 +130,63 @@
 		<div class="hit__item">
 
 			<img class="hit__item__image" src="" alt="Сливочное крем-брюле с карамельной подливкой">
-			<div class="item__price">415&#8381;<span>/кг</span></div>
+			<div class="item__price">415 &#8381;<span>/кг</span></div>
 			<h3 class="item__title">Сливочное крем-брюле с карамельной подливкой</h3>
 
 		</div>
 
 	</section>
 
-<h2>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</h2>
-
 	<section class="advantages">
 
-		<p class="advantage__descr">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-		<p class="advantage__descr">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-		<p class="advantage__descr">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального экологически чистого сырья.</p>
-		<p class="advantage__descr">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.</p>
-
-	</section>
-
-	<article class="blog">
-
-		<span class="blog__new">Новое в нашем блоге</span>
-		<a class="blog__link" href="">
-			<h2>10 способов серверовки фруктовых щербетов к столу</h2>
-		</a>
-
-	</article>
-
-	<section class="subscribe">
-		<p class="subscribe__note">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
-		<input type="email" placeholder="email@example.com">
-		<input type="button" value="Отправить">
-	</section>
-
-	<section class="map">
+		<p class="title">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</p>
 		
-		<img class="location map" src="">
+		<div class="advantage__items">
+
+			<p class="advantage__descr">Все наше мороженное изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+			<p class="advantage__descr">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+			<p class="advantage__descr">Для приготовления мороженного используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального экологически чистого сырья.</p>
+			<p class="advantage__descr">Доставка нашего мороженного до заказчиков осуществляется в специальном термопаке, который не дает мороженному растаять в пути и позволяет сохранить превосходный вкус.</p>
+
+		</div>
 
 	</section>
 
+	<section class="info__block">
+
+		<article class="blog">
+
+			<span class="blog__new">Новое в нашем блоге</span>
+			<a class="blog__link" href="">
+				<h2>10 способов серверовки фруктовых щербетов к столу</h2>
+			</a>
+
+		</article>
+
+		<form class="subscribe">
+			<p class="subscribe__note">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
+			<input type="email" placeholder="email@example.com">
+			<input type="button" value="Отправить">
+		</form>
+
+	</section>
+	
 	<section class="contacts">
 
-		<div class="adress">
-			<p>Адрес главного офиса и офлайн-магазина:<span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
+		<div class="map">
+		<img class="location map" src="" alt="Схема проезда">
 		</div>
-		<div class="tel">
-			<p>Для заказов по телефону:<span>8 812 450-25-25</span><span>(с 10 до 20 ежедневно)</span></p>
-		</div>
-		<button class="feedback">Форма обратной связи</button>
 
+		<div class="contact__info">
+			<div class="adress">
+				<p>Адрес главного офиса и офлайн-магазина:<span>ул. Большая Конюшенная 19/8, Санкт-Петербург</span></p>
+			</div>
+
+			<div class="tel">
+				<p>Для заказов по телефону:<span>8 812 450-25-25</span><span>(с 10 до 20 ежедневно)</span></p>
+			</div>
+			<button class="feedback">Форма обратной связи</button>
+		</div>
 	</section>
 
 </main>
@@ -196,12 +215,11 @@
 
 	<section class="copyrigth">
 		<img src="" alt="Логотип HTML Academy">
-		<p>Сделано в HTMK Academy © 2019</p>
+		<p>Сделано в HTML Academy © 2019</p>
 	</section>
 
 </footer>
 
-
-
  </body>
+
 </html>
