@@ -1,12 +1,63 @@
 
-/*
 body {
 box-sizing: border-box;
-background-image:linear-gradient(to right, #6e8c85, #9cd0ba, #6e8c85);
+background-color: #849D8F;
 font-family: 'Roboto', 'Arial', sans-serif;
 font-size: 14px;
 margin: 0 auto;
 width: 80%;
+background-image: url("../img/Мороженко 1.png"), 
+url("../img/Мороженко 2.png"), url("../img/Подсветка.png");
+background-repeat: no-repeat, no-repeat, no-repeat;
+background-position: 40% 10%, 60% 14%, center 1px;
+
+}
+
+.slider__action {
+font-weight: bold;
+font-size: 32px;
+line-height: 44px;
+background: linear-gradient(0deg, #E74A35 0%, #F26843 100%);
+box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+color: white;
+text-decoration: none;
+padding: 10px 30px;
+border-radius: 30px;
+position: relative;
+left:-350px;
+top: -70px;
+}
+
+.slider__title {
+font-weight: bold;
+font-size: 60px;
+line-height: 60px;	
+color: white;
+width: 48%;
+margin: 0 400px;
+position: relative;
+top: -100px;
+}
+
+.slider__scroll {
+position: relative;
+left: -300px;
+top: -70px;
+}
+
+.slider__main {
+height: 619px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: flex-end;
+align-content: flex-end;
+margin-bottom: 50px;
+}
+
+.slider__obj {
+width: 60%;
+margin: 0 auto;
 }
 
 .header {
