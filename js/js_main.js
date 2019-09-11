@@ -1,7 +1,7 @@
 "use strict";
 
 main.addEventListener ('click', function (evt) {
-	let text = document.querySelector('.slider__title');
+	let text = document.querySelector('.slider__title p');
 	let target = evt.target;
 	console.log(target);
 
