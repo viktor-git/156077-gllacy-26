@@ -50,6 +50,7 @@ body {
 position: relative;
 top: -140px;
 margin-bottom: -80px;
+margin-top: 416px;
 }
 
 .slider__title {
@@ -83,7 +84,6 @@ margin-bottom: -80px;
 .header {
 	display: flex;
 	min-height: 118px;
-	margin-bottom: 416px;
 }
 
 .header__nav {
