@@ -13,7 +13,7 @@ body {
 	background-image: url("../img/ice_cream_1.png"), 
 	url("../img/ice_cream_2.png"), url("../img/bg_theme_1.png");
 	background-repeat: no-repeat, no-repeat, no-repeat;
-	background-position: calc(50% - 160px) 94px, calc(50% + 140px) 137px, center 1px;
+	background-position: calc(50% - 160px) 94px, calc(50% + 135px) 147px, center 1px;
 	-webkit-background-size: 364px, 325px, ;
 	background-size: 364px, 325px, ;
 }
