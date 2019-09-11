@@ -1,0 +1,127 @@
+
+body {
+	box-sizing: border-box;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 14px;
+	margin: 0 auto;
+	background-color: #849D8F;
+	max-width: 1220px;
+}
+
+.first__theme {
+	background-image: url("../img/ice_cream_1.png"), 
+	url("../img/ice_cream_2.png"), url("../img/bg_theme_1.png");
+	background-repeat: no-repeat, no-repeat, no-repeat;
+	background-position: 606px 94px, 913px 137px, center 1px;
+	-webkit-background-size: 364px, 325px, ;
+	background-size: 364px, 325px, ;
+}
+
+.second__theme {
+	background-color: #8996A6;
+	background-image: url("../img/ice_cream_3.png"), url("../img/ice_cream_4.png"),
+	url("../img/bg_theme_2.png");
+
+}
+
+.third__theme {
+	background-color: #9D8B84;
+	background-image: url("../img/ice_cream_5.png"), url("../img/ice_cream_6.png"), url("../img/bg_theme_3.png");
+}
+
+.trans {
+	transition: background-image, background-color, ease-in, 1s;
+
+}
+.slider__action {
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 44px;
+	background: linear-gradient(0deg, #E74A35 0%, #F26843 100%);
+	box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+	color: white;
+	text-decoration: none;
+	padding: 10px 30px;
+	border-radius: 30px;
+}
+
+.slider__title {
+	font-weight: bold;
+    font-size: 60px;
+    line-height: 60px;
+    color: white;
+    position: relative;
+    top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.slider__title p {
+	flex-basis: 740px;
+    margin: 0;
+    text-align: center;
+}
+
+.slider__active {
+	display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    position: relative;
+    top: -50px;
+}
+
+.slider__scroll {
+	margin-right: 400px;
+}
+
+.header {
+	display: flex;
+	min-height: 118px;
+	margin-bottom: 416px;
+}
+
+.header__nav {
+	width: 60%;
+}
+
+.header__interactive {
+	width: 20%;
+	text-align: left;
+}
+
+.header__nav .nav__menu{
+	display: flex;
+	list-style: none;
+	padding-left: 23px;
+}
+
+.nav__menu li:not(:last-child) {
+	margin-right: 30px;
+}
+
+.nav__submenu {
+	display: none;
+	list-style: none;
+	padding: 10px;
+	background-color: whitesmoke;
+	position: absolute;
+	min-width: 150px;
+	transform: translateY(5px);
+}
+
+.nav__menu li:first-child:hover .nav__submenu  {
+	display: block;
+}
+
+.nav__menu li:first-child {
+	position: relative;
+}
+
+.nav__link {
+	font-weight: bold;
+	text-decoration: none;
+	border-bottom: 1px solid rgba(189, 253, 253, 0.5);
+	color: white;
+}
