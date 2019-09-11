@@ -6,27 +6,28 @@ body {
 	margin: 0 auto;
 	background-color: #849D8F;
 	max-width: 1220px;
+
 }
 
 .first__theme {
-	background-image: url("../img/ice_cream_slide/ice_cream_1.png"), 
-	url("../img/ice_cream_slide/ice_cream_2.png"), url("../img/ice_cream_slide/bg_theme_1.png");
+	background-image: url("../img/ice_cream_1.png"), 
+	url("../img/ice_cream_2.png"), url("../img/bg_theme_1.png");
 	background-repeat: no-repeat, no-repeat, no-repeat;
-	background-position: 606px 94px, 913px 137px, center 1px;
+	background-position: calc(50% - 160px) 94px, calc(50% + 140px) 137px, center 1px;
 	-webkit-background-size: 364px, 325px, ;
 	background-size: 364px, 325px, ;
 }
 
 .second__theme {
 	background-color: #8996A6;
-	background-image: url("../img/ice_cream_slide/ice_cream_3.png"), url("../img/ice_cream_slide/ice_cream_4.png"),
-	url("../img/ice_cream_slide/bg_theme_2.png");
+	background-image: url("../img/ice_cream_3.png"), url("../img/ice_cream_4.png"),
+	url("../img/bg_theme_2.png");
 
 }
 
 .third__theme {
 	background-color: #9D8B84;
-	background-image: url("../img/ice_cream_slide/ice_cream_5.png"), url("../img/ice_cream_slide/ice_cream_6.png"), url("../img/ice_cream_slide/bg_theme_3.png");
+	background-image: url("../img/ice_cream_5.png"), url("../img/ice_cream_6.png"), url("../img/bg_theme_3.png");
 }
 
 .trans {
@@ -45,16 +46,21 @@ body {
 	border-radius: 30px;
 }
 
+.slider__main {
+position: relative;
+top: -140px;
+margin-bottom: -80px;
+}
+
 .slider__title {
 	font-weight: bold;
     font-size: 60px;
     line-height: 60px;
     color: white;
-    position: relative;
-    top: -100px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-bottom: 40px;
 
 }
 
@@ -68,8 +74,6 @@ body {
 	display: flex;
     justify-content: flex-start;
     align-items: baseline;
-    position: relative;
-    top: -50px;
 }
 
 .slider__scroll {
