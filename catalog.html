@@ -7,8 +7,8 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>HTML Academy: Каталог сливочного мороженного Глейси </title>
-	    <script async src="./js/js_main.js"></script>
-	    <link rel="stylesheet" href="./css/main_css.css" type="text/css"/>
+	    <script async src="js/js_main.js"></script>
+	    <link rel="stylesheet" href="css/main_css.css" type="text/css"/>
 	    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
 
 	</head>
@@ -18,8 +18,8 @@
 		<header class="header">
 
 			<div class="header__logo">
-				<a href="./index.html">
-					<img src="" alt="Гототип Глэйси">
+				<a href="index.html">
+					<img src="img/svg/logo.svg" width="154" height="64"  alt="Гототип Глэйси">
 				</a>
 			</div>
 
@@ -27,14 +27,14 @@
 
 				<ul class="nav__menu">
 					<li>
-						<a href="/catalog.html" class="nav__link">Каталог</a>					
+						<a href="" class="nav__link">Каталог</a>					
 						<ul class="nav__submenu">
 							<li>
 								<a href="">Новинки</a>
 							</li>
 
 							<li>
-								<a href="./catalog.html">Сливочное</a>
+								<a href="catalog.html">Сливочное</a>
 							</li>
 
 							<li>
@@ -81,11 +81,11 @@
 
 		<main class="main">
 
-			<section class="breadcrumbs">
+			<div class="breadcrumbs">
 
 				<ul>
 					<li class="breadcrumb__item">
-						<a href="./index.html">Главная</a>
+						<a href="index.html">Главная</a>
 					</li>
 
 					<li class="breadcrumb__item">»</li>
@@ -94,11 +94,13 @@
 					<li class="breadcrumb__item">Сливочное</li>
 				</ul>
 
-			</section>
+			</div>
 			
 			<h1>Сливочное мороженное</h1>
 
-			<section class="filters">
+			<section class="filters">	
+
+				<h2 hidden>Фильтры и сортировка</h2>
 				
 				<form class="filter">
 
@@ -156,86 +158,85 @@
 
 			</section>
 
-			
-
 			<section class="catalog">
+
 				<h2 hidden>Каталог сливочного мороженного</h2>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_orange.png" width="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 					<div class="item__price">310 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочно-кофейное с кусочками шоколада">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_coffee.png" width="267" alt="Сливочно-кофейное с кусочками шоколада">
 					<div class="item__price">380 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-кофейное с кусочками шоколада</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_straw.png" width="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 					<div class="item__price">355 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочное крем-брюле с карамельной подливкой">
+					<img class="catalog__item__image" src="img/ice_cream_cat/creme_brulee_caram.png" width="267" alt="Сливочное крем-брюле с карамельной подливкой">
 					<div class="item__price">415 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное крем-брюле с карамельной подливкой</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочное бручничным джемом">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_cowberry.png" width="267" alt="Сливочное c бруcчничным джемом">
 					<div class="item__price">325 &#8381;<span>/кг</span></div>
-					<h3 class="item__title">Сливочное бручничным джемом</h3>
+					<h3 class="item__title">Сливочное c бруcчничным джемом</h3>
 				</div>
 
 				<div class="catalog__item">				
-					<img class="catalog__item__image" src="" alt="Сливочно-черничное с цельными ягодами черники">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_blueberry.png" width="267" alt="Сливочно-черничное с цельными ягодами черники">
 					<div class="item__price">410 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-черничное с цельными ягодами черники</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочно-лимонное с карамельной присыпко">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_lemon.png" width="267" alt="Сливочно-лимонное с карамельной присыпко">
 					<div class="item__price">375 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-лимонное с карамельной присыпкой</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочное с шоколадной стружкой">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_choco.png" width="267" alt="Сливочное с шоколадной стружкой">
 					<div class="item__price">320 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с шоколадной стружкой</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочное-ванильное с кусочками шоколада">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cram_vanila.png" width="267" alt="Сливочное-ванильное с кусочками шоколада">
 					<div class="item__price">440 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-ванильное с кусочками шоколада</h3>
 				</div>
 
 				<div class="catalog__item">				
-					<img class="catalog__item__image" src="" alt="Сливочно с ментоловым сиропом">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_menthol.png" width="267" alt="Сливочно с ментоловым сиропом">
 					<div class="item__price">435 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с ментоловым сиропом</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочное с кусочками черного шоколада">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_choco_bites.png" width="267" alt="Сливочное с кусочками черного шоколада">
 					<div class="item__price">355 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с кусочками черного шоколада</h3>
 				</div>
 
 				<div class="catalog__item">
-					<img class="catalog__item__image" src="" alt="Сливочное с мятным сиропом">
+					<img class="catalog__item__image" src="img/ice_cream_cat/cream_mint.png" width="267" alt="Сливочное с мятным сиропом">
 					<div class="item__price">420 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с мятным сиропом</h3>
 				</div>
 
 			</section>
 
-			<section class="pagination">
+			<div class="pagination">
 
 				<a href="" class="page__num">1</a>
 				<a href="" class="page__num">2</a>
@@ -244,22 +245,22 @@
 				<a href="" class="page__num">5</a>
 				<a href="" class="next__page">></a>
 
-			</section>
+			</div>
 
 		</main>
 
 		<footer class="footer">
 
-			<section class="social">
+			<div class="social">
 
 				<a href="" class="twitter"></a>
 				<a href="" class="instagramm"></a>
 				<a href="" class="facebook"></a>
 				<a href="" class="vk"></a>
 
-			</section>
+			</div>
 
-			<section class="footer__nav">
+			<div class="footer__nav">
 
 				<ul class="footer__nav__links">
 					<li class="footer__nav__link"><
@@ -279,16 +280,16 @@
 					</li>
 				</ul>
 
-			</section>
+			</div>
 
-			<section class="copyrigth">
+			<div class="copyrigth">
 
 				<a href="https://htmlacademy.ru/intensive/htmlcss">
-					<img src="" alt="Логотип HTML Academy">
+					<img src="img/svg/logo-htmlacademy.svg" width="109" height="38" alt="Логотип HTML Academy">
 					<p>Сделано в HTML Academy © 2019</p>
 				</a>
 
-			</section>
+			</div>
 
 		</footer>
 
