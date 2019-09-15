@@ -67,7 +67,7 @@
 				<div class="search">
 					<button class="search__btn" type="submit">Поиск</button>
 					<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
-						<input type="search" placeholder="Крем-брюле" aria-label="Поиск">
+						<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="Поиск">
 					</form>
 				</div>
 				
@@ -148,10 +148,10 @@
 
 					<fieldset class="sort">
 						<label for="sort__options">Сортировка:</label>
-							<select id="sort__options">
+							<select id="sort__options" name="Сортировка">
 								<option>По популярности</option>	
 								<option>Сначала недорогие</option>
-								<option>Сначала дорогие</option>
+								<option>Сначала недорогие</option>
 								<option>По жирности</option>
 							</select>
 						
@@ -159,7 +159,7 @@
 
 					<fieldset class="price__filter">
 						<label for="price__range">Цена: 100 руб. - 500 руб.</label>
-						<input type="range" min="100" max="500" step="5" id="price__range" value="300">
+						<input type="range" min="100" max="500" step="5" id="price__range" value="300" name="Цена">
 					</fieldset>	
 
 					<fieldset class="fatness__filter">
