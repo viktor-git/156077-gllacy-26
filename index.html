@@ -23,7 +23,7 @@
 
 			<nav class="header__nav">
 
-				<ul class="nav__menu">
+				<ul class="nav__menu" aria-label="Основная навигация">
 					<li>
 						<a href="" class="nav__link">Каталог</a>
 						<ul class="nav__submenu">
@@ -62,15 +62,35 @@
 		    
 		    <div class="header__interactive">
 
-				<div class="header__buttons">
-					<button class="search">Поиск</button>
-					<button class="login">Вход</button>
-					<button class="cart">Пусто</button>
-				</div>		
+				<div class="search">
+					<button class="search__btn" type="submit">Поиск</button>
+					<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
+						<input type="search" placeholder="Крем-брюле" aria-label="Поиск">
+					</form>
+				</div>
+				
+				<div class="login">
+					<button class="login__btn">Вход</button>
+					<form class="login__form" method="post" action="https://echo.htmlacademy.ru" name="login__form" aria-label="Форма входа">	
+						<p>		
+							<input id="login__email" name="Email" type="email" placeholder="email@example.com" aria-label="Почта">
+						</p>
+						<p>
+							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="Пароль">
+						</p>	
+						<button>Войти</button>
+						<a href="">Забыли пароль?</a>
+						<a href="">Новая регистрация</a>
+					</form>
+				</div>
+				
+				<div class="cart">
+					<button class="cart__btn">Пусто</button>	
+				</div>
 
 				<div class="header__contacts">
 					<div class="header__time">c 10 до 20, ежедневно</div>
-					<a href="tel: +78124502525"  class="header__tel">8 812 450-25-25</a>
+					<a href="tel: +78124502525" class="header__tel">8 812 450-25-25</a>
 				</div>
 
 			</div>
@@ -79,11 +99,11 @@
 
 		<main class="main">
 
-			<h1 hidden>Интерент-магазин мороженного Глэйси</h1>
+			<h1 class="visually__hidden">Интерент-магазин мороженного Глэйси</h1>
 
 			<section class="slider__main">
 
-				<h2 hidden>Слайдер</h2> 
+				<h2 class="visually__hidden">Слайдер</h2> 
 
 				<div class="slider__title">
 					<p>Крем-брюле и пломбир с малиновым джемом</p>
@@ -102,7 +122,7 @@
 
 			<section class="special__offers">
 				
-				<h2 hidden>Специальные предложения</h2>
+				<h2 class="visually__hidden">Специальные предложения</h2>
 
 				<div class="special_offer">
 					<span class="offer_title">Малинка даром!</span>
@@ -120,7 +140,7 @@
 
 			<section class="hit__items">
 
-				<h2 hidden>Хиты продаж</h2>
+				<h2 class="visually__hidden">Хиты продаж</h2>
 
 				<div class="hit__item">
 					<img class="hit__item__image" src="img/cream_orange.png" width="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -150,7 +170,7 @@
 
 			<section class="advantages">
 
-				<h2 hidden>Преимущества</h2>
+				<h2 class="visually__hidden">Преимущества</h2>
 
 				<p class="title">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженного собственного производства на развес</p>
 				
@@ -165,29 +185,30 @@
 
 			<section class="info__block">
 				
-				<h2 hidden>Блог</h2>
+				<h2 class="visually__hidden">Блог</h2>
 
 				<article class="blog">
 					<span class="blog__new">Новое в нашем блоге</span>
 					<a class="blog__link" href="">
-						<h2>10 способов серверовки фруктовых щербетов к столу</h2>
+						<h3>10 способов серверовки фруктовых щербетов к столу</h3>
 					</a>
 				</article>
 
-				<form class="subscribe">
+				<form class="subscribe__form" method="post" action="https://echo.htmlacademy.ru" name="subscribe__form" aria-label="Подписка на рассылку">
 					<p class="subscribe__note">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
-					<input type="email" placeholder="email@example.com">
-					<input type="submit" value="Отправить">
+					<input type="email" placeholder="email@example.com" name="Email" aria-label="Ваша почта">
+					<button type="submit">Отправить</button>
 				</form>
 
 			</section>
 			
 			<section class="contacts">
 				
-				<h2 hidden>Контакты</h2>
+				<h2 class="visually__hidden">Контакты</h2>
 
 				<div class="map">
-					<img class="location map" src="" alt="Схема проезда">
+					<img class="location map" src="img/bg_map.jpg" alt="Схема проезда">
+					<img class="map__marker" src="img/svg/pin.svg">
 				</div>
 
 				<div class="contact__info">
@@ -203,7 +224,30 @@
 							<span>(с 10 до 20 ежедневно)</span>
 						</p>
 					</div>
+
 					<button class="feedback">Форма обратной связи</button>
+					<form  class="feedback__form" method="post" action="https://echo.htmlacademy.ru" aria-label="Форма обратной связи">
+					
+						<p>Мы обязательно Вам ответим</p>
+
+						<button class="close__btn" aria-label="Закрыть">X</button>
+
+						<p>
+							<input type="text" id="feedback__user__name" name="Имя пользователя" placeholder="Имя Фамилия" aria-label="ФИО">
+						</p>
+
+						<p>
+							<input type="email" id="feedback__email" name="Еmail" placeholder="email@example.com" aria-label="Ваша почта">
+						</p>
+
+						<p>
+							<input type="text" id="feedback_message" name="Сообщение" placeholder="В свободной форме" aria-label="Ваше сообщение в свободной форме">
+						</p>
+
+						<button type="submit">Отправить</button>
+
+					</form>	
+
 				</div>
 
 			</section>
@@ -213,12 +257,12 @@
 		<footer class="footer">
 
 			<div class="social">
-
-				<a href="" class="twitter"></a>
-				<a href="" class="instagramm"></a>
-				<a href="" class="facebook"></a>
-				<a href="" class="vk"></a>
-
+				<h2 class="visually__hidden">Социальные сети</h2>
+				<a href="" class="twitter" aria-label="Twitter"></a>
+				<a href="" class="instagramm" aria-label="Instagramm"></a>
+				<a href="" class="facebook" aria-label="Facebook"></a>
+				<a href="" class="vk" aria-label="Vkontakte"></a>
+				
 			</div>
 
 			<div class="footer__nav">

@@ -64,11 +64,53 @@
 		    
 		    <div class="header__interactive">
 
-				<div class="header__buttons">
-					<button class="search">Поиск</button>
-					<button class="login">Вход</button>
-					<button class="cart">Пусто</button>
-				</div>		
+				<div class="search">
+					<button class="search__btn" type="submit">Поиск</button>
+					<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
+						<input type="search" placeholder="Крем-брюле" aria-label="Поиск">
+					</form>
+				</div>
+				
+				<div class="login">
+					<button class="login__btn">Вход</button>
+					<form class="login__form" method="post" action="https://echo.htmlacademy.ru" name="login__form" aria-label="Форма входа">	
+						<p>		
+							<input id="login__email" name="Email" type="email" placeholder="email@example.com" aria-label="Почта">
+						</p>
+						<p>
+							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="Пароль">
+						</p>	
+						<button>Войти</button>
+						<a href="">Забыли пароль?</a>
+						<a href="">Новая регистрация</a>
+					</form>
+				</div>
+
+				<div class="cart">
+					<button class="cart__btn">2 товара</button>	
+					<div class="cart_items">
+
+						<div class="cart__item">
+							<button class="cart__item__delete" aria-label="Удалить">X</button>
+							<div class="cart__item__img"><img class="catalog__item__image" src="img/cream_orange.png" width="33" alt="Пломбир с апельсиновым джемом"></div>
+							<div class="cart__item__tilte">Пломбир с апельсиновым джемом</div>
+							<div class="cart__item__count">1,5 кг х <span>200 руб.</span></div>
+							<div class="cart__item__total">300 руб.</div>
+						</div>
+
+						<div class="cart__item">
+							<button class="cart__item__delete" aria-label="Удалить">X</button>
+							<div class="cart__item__img"><img class="catalog__item__image" src="img/cream_straw.png" width="33" alt="Клубничный пломбир с присыпкой из белого шоколада"></div>
+							<div class="cart__item__tilte">Клубничный пломбир с присыпкой из белого шоколада</div>
+							<div class="cart__item__count">1,5 кг х <span>300 руб.</span></div>
+							<div class="cart__item__total">450 руб.</div>
+						</div>
+
+						<div class="cart__total__cost">Итого: 750 руб.</div>
+						<a href="" class="place__order">Оформить заказ</a>
+
+					</div>
+				</div>	
 
 				<div class="header__contacts">
 					<div class="header__time">c 10 до 20, ежедневно</div>
@@ -100,59 +142,61 @@
 
 			<section class="filters">	
 
-				<h2 hidden>Фильтры и сортировка</h2>
+				<h2 class="visually__hidden">Фильтры и сортировка</h2>
 				
-				<form class="filter">
+				<form class="filter" method="post" action="https://echo.htmlacademy.ru">
 
-					<div class="sort">
-						<span>Сортировка:</span>
-						<select>
-							<option>По популярности</option>	
-							<option>По ворастанию цены</option>
-							<option>По убыванию цены</option>
-						</select>
-					</div>	
+					<fieldset class="sort">
+						<label for="sort__options">Сортировка:</label>
+							<select id="sort__options">
+								<option>По популярности</option>	
+								<option>Сначала недорогие</option>
+								<option>Сначала дорогие</option>
+								<option>По жирности</option>
+							</select>
+						
+					</fieldset>	
 
-					<div class="price__filter">
+					<fieldset class="price__filter">
 						<label for="price__range">Цена: 100 руб. - 500 руб.</label>
-						<input type="range" min="100" max="500" step="5" id="price__range">
-					</div>	
+						<input type="range" min="100" max="500" step="5" id="price__range" value="300">
+					</fieldset>	
 
-					<div class="fatness__filter">
-						<span>Жирность:</span>
-						<input type="radio" name="fatness__value" id="fat__val-1">
+					<fieldset class="fatness__filter">
+						<legend>Жирность:</legend>
+						<input type="radio" name="Значение жирности" id="fat__val-1" value="0%">
 						<label for="fat__val-1">0%</label>
 
-						<input type="radio" name="fatness__value" id="fat__val-2">
+						<input type="radio" name="Значение жирности" id="fat__val-2" value="до 10%">
 						<label for="fat__val-2">до 10%</label>
 
-						<input type="radio" name="fatness__value" id="fat__val-3">
+						<input type="radio" name="Значение жирности" id="fat__val-3" value="до 30%">
 						<label for="fat__val-3">до 30%</label>
 
-						<input type="radio" name="fatness__value" id="fat__val-4">
+						<input type="radio" name="Значение жирности" id="fat__val-4" value="свыше 30%">
 						<label for="fat__val-4">свыше 30%</label>
-					</div>
+					</fieldset>
 
 
-					<div class="filler__filter">
-						<span>Наполнители:</span>
-						<input type="checkbox" name="filler__value" id="filler_value-1">
+					<fieldset class="filler__filter">
+						<legend>Наполнители:</legend>
+						<input type="checkbox" name="Шоколадный наполнитель" id="filler__value-1">
 						<label for="filler__value-1">шоколадные</label>
 
-						<input type="checkbox" name="filler__value" id="filler_value-2">
+						<input type="checkbox" name="Сахарная присыпка" id="filler__value-2">
 						<label for="filler__value-2">сахарные присыпки</label>
 
-						<input type="checkbox" name="filler__value" id="filler_value-3">
+						<input type="checkbox" name="Фрукты" id="filler__value-3">
 						<label for="filler__value-3">фрукты</label>
 
-						<input type="checkbox" name="filler__value" id="filler_value-4">
+						<input type="checkbox" name="Сиропы" id="filler__value-4">
 						<label for="filler__value-4">сиропы</label>
 
-						<input type="checkbox" name="filler__value" id="filler_value-5">
+						<input type="checkbox" name="Джемы" id="filler__value-5">
 						<label for="filler__value-5">джемы</label>
-					</div>
+					</fieldset>
 
-					<input class="apply__filter" type="submit" value="Применить">
+					<button class="apply__filter" type="submit">Применить</button>
 				
 				</form>
 
@@ -160,7 +204,7 @@
 
 			<section class="catalog">
 
-				<h2 hidden>Каталог сливочного мороженного</h2>
+				<h2 class="visually__hidden">Каталог сливочного мороженного</h2>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_orange.png" width="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
@@ -252,19 +296,19 @@
 		<footer class="footer">
 
 			<div class="social">
-
-				<a href="" class="twitter"></a>
-				<a href="" class="instagramm"></a>
-				<a href="" class="facebook"></a>
-				<a href="" class="vk"></a>
+				<h2 class="visually__hidden">Социальные сети</h2>
+				<a href="" class="twitter" aria-label="Twitter"></a>
+				<a href="" class="instagramm" aria-label="Instagramm"></a>
+				<a href="" class="facebook" aria-label="Facebook"></a>
+				<a href="" class="vk" aria-label="Vkontakte"></a>
 
 			</div>
 
 			<div class="footer__nav">
 
 				<ul class="footer__nav__links">
-					<li class="footer__nav__link"><
-						a href="">Для поставщиков</a>
+					<li class="footer__nav__link">
+						<a href="">Для поставщиков</a>
 					</li>
 
 					<li class="footer__nav__link">

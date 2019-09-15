@@ -4,18 +4,17 @@ body {
 	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 14px;
 	margin: 0 auto;
-	background-color: #849D8F;
 	max-width: 1220px;
-
+	background-color: #849D8F;
 }
 
 .first__theme {
-	background-image: url("../img/ice_cream_1.png"), 
-	url("../img/ice_cream_2.png"), url("../img/bg_theme_1.png");
-	background-repeat: no-repeat, no-repeat, no-repeat;
-	background-position: calc(50% - 160px) 94px, calc(50% + 135px) 147px, center 1px;
-	-webkit-background-size: 364px, 325px, ;
-	background-size: 364px, 325px, ;
+	background: url("../img/ice_cream_1.png") calc(50% - 160px) 94px no-repeat, 
+	            url("../img/ice_cream_2.png") calc(50% + 135px) 147px no-repeat, 
+	            url("../img/bg_theme_1.png") center 1px no-repeat;
+	-webkit-background-size: 364px, 325px, 100%;
+	background-size: 364px, 325px, 100%;
+	background-color: #849D8F;
 }
 
 .second__theme {
@@ -128,4 +127,20 @@ margin-top: 416px;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(189, 253, 253, 0.5);
 	color: white;
+}
+
+.visually__hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+:focus {
+box-shadow: 0 0 10px red;
+
 }
