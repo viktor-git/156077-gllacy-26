@@ -80,7 +80,7 @@
 						<p>
 							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="Пароль">
 						</p>	
-						<button>Войти</button>
+						<button type="submit">Войти</button>
 						<a href="">Забыли пароль?</a>
 						<a href="">Новая регистрация</a>
 					</form>
@@ -148,13 +148,12 @@
 
 					<fieldset class="sort">
 						<label for="sort__options">Сортировка:</label>
-							<select id="sort__options" name="Сортировка">
-								<option>По популярности</option>	
-								<option>Сначала недорогие</option>
-								<option>Сначала недорогие</option>
-								<option>По жирности</option>
-							</select>
-						
+						<select id="sort__options" name="Сортировка">
+							<option>По популярности</option>	
+							<option>Сначала недорогие</option>
+							<option>Сначала недорогие</option>
+							<option>По жирности</option>
+						</select>
 					</fieldset>	
 
 					<fieldset class="price__filter">
@@ -164,36 +163,36 @@
 
 					<fieldset class="fatness__filter">
 						<legend>Жирность:</legend>
-						<input type="radio" name="Значение жирности" id="fat__val-1" value="0%">
-						<label for="fat__val-1">0%</label>
+						<input type="radio" name="Значение жирности" id="fat__value-0" value="0%">
+						<label for="fat__value-0">0%</label>
 
-						<input type="radio" name="Значение жирности" id="fat__val-2" value="до 10%">
-						<label for="fat__val-2">до 10%</label>
+						<input type="radio" name="Значение жирности" id="fat__value-10" value="до 10%">
+						<label for="fat__value-10">до 10%</label>
 
-						<input type="radio" name="Значение жирности" id="fat__val-3" value="до 30%">
-						<label for="fat__val-3">до 30%</label>
+						<input type="radio" name="Значение жирности" id="fat__value-30" value="до 30%">
+						<label for="fat__value-30">до 30%</label>
 
-						<input type="radio" name="Значение жирности" id="fat__val-4" value="свыше 30%">
-						<label for="fat__val-4">свыше 30%</label>
+						<input type="radio" name="Значение жирности" id="fat__value-over-30" value="свыше 30%">
+						<label for="fat__value-over-30">свыше 30%</label>
 					</fieldset>
 
 
 					<fieldset class="filler__filter">
 						<legend>Наполнители:</legend>
-						<input type="checkbox" name="Шоколадный наполнитель" id="filler__value-1">
-						<label for="filler__value-1">шоколадные</label>
+						<input type="checkbox" name="Шоколадный наполнитель" id="filler__choco">
+						<label for="filler__choco">шоколадные</label>
 
-						<input type="checkbox" name="Сахарная присыпка" id="filler__value-2">
-						<label for="filler__value-2">сахарные присыпки</label>
+						<input type="checkbox" name="Сахарная присыпка" id="filler__sugar">
+						<label for="filler__sugar">сахарные присыпки</label>
 
-						<input type="checkbox" name="Фрукты" id="filler__value-3">
-						<label for="filler__value-3">фрукты</label>
+						<input type="checkbox" name="Фрукты" id="filler__fruits">
+						<label for="iller__fruits">фрукты</label>
 
-						<input type="checkbox" name="Сиропы" id="filler__value-4">
-						<label for="filler__value-4">сиропы</label>
+						<input type="checkbox" name="Сиропы" id="filler__vsyrup">
+						<label for="filler__vsyrup">сиропы</label>
 
-						<input type="checkbox" name="Джемы" id="filler__value-5">
-						<label for="filler__value-5">джемы</label>
+						<input type="checkbox" name="Джемы" id="filler__jam">
+						<label for="filler__jam">джемы</label>
 					</fieldset>
 
 					<button class="apply__filter" type="submit">Применить</button>
@@ -210,72 +209,84 @@
 					<img class="catalog__item__image" src="img/cream_orange.png" width="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 					<div class="item__price">310 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_coffee.png" width="267" alt="Сливочно-кофейное с кусочками шоколада">
 					<div class="item__price">380 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-кофейное с кусочками шоколада</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_straw.png" width="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 					<div class="item__price">355 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/creme_brulee_caram.png" width="267" alt="Сливочное крем-брюле с карамельной подливкой">
 					<div class="item__price">415 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное крем-брюле с карамельной подливкой</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_cowberry.png" width="267" alt="Сливочное c бруcчничным джемом">
 					<div class="item__price">325 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное c бруcчничным джемом</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">				
 					<img class="catalog__item__image" src="img/cream_blueberry.png" width="267" alt="Сливочно-черничное с цельными ягодами черники">
 					<div class="item__price">410 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-черничное с цельными ягодами черники</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_lemon.png" width="267" alt="Сливочно-лимонное с карамельной присыпко">
 					<div class="item__price">375 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-лимонное с карамельной присыпкой</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_choco.png" width="267" alt="Сливочное с шоколадной стружкой">
 					<div class="item__price">320 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с шоколадной стружкой</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cram_vanila.png" width="267" alt="Сливочное-ванильное с кусочками шоколада">
 					<div class="item__price">440 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочно-ванильное с кусочками шоколада</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">				
 					<img class="catalog__item__image" src="img/cream_menthol.png" width="267" alt="Сливочно с ментоловым сиропом">
 					<div class="item__price">435 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с ментоловым сиропом</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_choco_bites.png" width="267" alt="Сливочное с кусочками черного шоколада">
 					<div class="item__price">355 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с кусочками черного шоколада</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 				<div class="catalog__item">
 					<img class="catalog__item__image" src="img/cream_mint.png" width="267" alt="Сливочное с мятным сиропом">
 					<div class="item__price">420 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">Сливочное с мятным сиропом</h3>
+					<button class="fast__view">Быстрый просмотр</button>
 				</div>
 
 			</section>
@@ -306,20 +317,20 @@
 
 			<div class="footer__nav">
 
-				<ul class="footer__nav__links">
-					<li class="footer__nav__link">
+				<ul class="footer__nav__items">
+					<li class="footer__nav__item">
 						<a href="">Для поставщиков</a>
 					</li>
 
-					<li class="footer__nav__link">
+					<li class="footer__nav__item">
 						<a href="">О производстве</a>
 					</li>
 
-					<li class="footer__nav__link">
+					<li class="footer__nav__item">
 						<a href="">Наши документы</a>
 					</li>
 					
-					<li class="footer__nav__link">
+					<li class="footer__nav__item">
 						<a href="">Экологические стандарты</a>
 					</li>
 				</ul>
