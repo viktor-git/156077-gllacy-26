@@ -9,7 +9,7 @@
 	    <title>HTML Academy: Каталог интернет-магазина мороженного Глэйси</title>
 	    <script async src="js/js_main.js"></script>
 	    <link rel="stylesheet" href="css/main_css.css" type="text/css"/>
-	    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet" rel="stylesheet">
 
 	</head>
 
@@ -19,7 +19,7 @@
 
 			<div class="header__logo">
 				<a href="index.html">
-					<img src="img/svg/logo.svg" width="154" height="64"  alt="Гототип Глэйси">
+					<img src="img/svg/logo.svg" width="154" height="64"  alt="Лототип Глэйси">
 				</a>
 			</div>
 
@@ -67,7 +67,7 @@
 				<div class="search">
 					<button class="search__btn" type="submit">Поиск</button>
 					<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
-						<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="Поиск">
+						<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="search">
 					</form>
 				</div>
 				
@@ -75,10 +75,10 @@
 					<button class="login__btn">Вход</button>
 					<form class="login__form" method="post" action="https://echo.htmlacademy.ru" name="login__form" aria-label="Форма входа">	
 						<p>		
-							<input id="login__email" name="Email" type="email" placeholder="email@example.com" aria-label="Почта">
+							<input id="login__email" name="email" type="email" placeholder="email@example.com" aria-label="Почта">
 						</p>
 						<p>
-							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="Пароль">
+							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="password">
 						</p>	
 						<button type="submit">Войти</button>
 						<a href="">Забыли пароль?</a>
@@ -152,7 +152,7 @@
 
 					<fieldset class="sort">
 						<label for="sort__options">Сортировка:</label>
-						<select id="sort__options" name="Сортировка">
+						<select id="sort__options" name="sort">
 							<option>По популярности</option>	
 							<option>Сначала недорогие</option>
 							<option>Сначала недорогие</option>
@@ -162,40 +162,40 @@
 
 					<fieldset class="price__filter">
 						<label for="price__range">Цена: 100 руб. - 500 руб.</label>
-						<input type="range" min="100" max="500" step="5" id="price__range" value="300" name="Цена">
+						<input type="range" min="100" max="500" step="5" id="price__range" value="300" name="price">
 					</fieldset>	
 
 					<fieldset class="fatness__filter">
 						<legend>Жирность:</legend>
-						<input type="radio" name="Значение жирности" id="fat__value-0" value="0%">
+						<input type="radio" name="fatness" id="fat__value-0" value="0%">
 						<label for="fat__value-0">0%</label>
 
-						<input type="radio" name="Значение жирности" id="fat__value-10" value="до 10%">
+						<input type="radio" name="fatness" id="fat__value-10" value="до 10%">
 						<label for="fat__value-10">до 10%</label>
 
-						<input type="radio" name="Значение жирности" id="fat__value-30" value="до 30%">
+						<input type="radio" name="fatness" id="fat__value-30" value="до 30%">
 						<label for="fat__value-30">до 30%</label>
 
-						<input type="radio" name="Значение жирности" id="fat__value-over-30" value="свыше 30%">
+						<input type="radio" name="fatness" id="fat__value-over-30" value="свыше 30%">
 						<label for="fat__value-over-30">свыше 30%</label>
 					</fieldset>
 
 
 					<fieldset class="filler__filter">
 						<legend>Наполнители:</legend>
-						<input type="checkbox" name="Шоколадный наполнитель" id="filler__choco">
+						<input type="checkbox" name="chocolate" id="filler__choco">
 						<label for="filler__choco">шоколадные</label>
 
-						<input type="checkbox" name="Сахарная присыпка" id="filler__sugar">
+						<input type="checkbox" name="sugar" id="filler__sugar">
 						<label for="filler__sugar">сахарные присыпки</label>
 
-						<input type="checkbox" name="Фрукты" id="filler__fruits">
+						<input type="checkbox" name="fruits" id="filler__fruits">
 						<label for="iller__fruits">фрукты</label>
 
-						<input type="checkbox" name="Сиропы" id="filler__vsyrup">
+						<input type="checkbox" name="syrup" id="filler__syrup">
 						<label for="filler__vsyrup">сиропы</label>
 
-						<input type="checkbox" name="Джемы" id="filler__jam">
+						<input type="checkbox" name="jams" id="filler__jam">
 						<label for="filler__jam">джемы</label>
 					</fieldset>
 

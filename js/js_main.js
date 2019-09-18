@@ -25,4 +25,6 @@ main.addEventListener ('click', function (evt) {
 			main.classList.add('trans');
 			text.textContent = 'Пломбир с помадкой и клубничный щербет';
 	}
+
 });
+

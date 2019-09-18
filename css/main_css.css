@@ -6,8 +6,19 @@ body {
 	margin: 0 auto;
 	max-width: 1220px;
 	background-color: #849D8F;
+	color: black;
 }
 
+.header {
+	display: flex;
+	min-height: 118px;
+}
+
+.header__logo {
+    transform: translateY(-8px);
+}
+
+/*Стилизация для слайдера*/
 .first__theme {
 	background: url("../img/ice_cream_1.png") calc(50% - 160px) 94px no-repeat, 
 	            url("../img/ice_cream_2.png") calc(50% + 135px) 147px no-repeat, 
@@ -31,8 +42,8 @@ body {
 
 .trans {
 	transition: background-image, background-color, ease-in, 1s;
-
 }
+
 .slider__action {
 	font-weight: bold;
 	font-size: 32px;
@@ -46,10 +57,10 @@ body {
 }
 
 .slider__main {
-position: relative;
-top: -140px;
-margin-bottom: -80px;
-margin-top: 416px;
+	position: relative;
+	top: -135px;
+	margin-bottom: -80px;
+	margin-top: 416px;
 }
 
 .slider__title {
@@ -80,41 +91,24 @@ margin-top: 416px;
 	margin-right: 400px;
 }
 
-.header {
-	display: flex;
-	min-height: 118px;
-}
+
+/*Стилизация навигация в хедере*/
 
 .header__nav {
 	width: 60%;
 }
 
-.header__interactive {
-	width: 20%;
-	text-align: left;
-}
-
 .header__nav .nav__menu{
 	display: flex;
 	list-style: none;
-	padding-left: 23px;
+	padding-left: 0;
 }
 
-.nav__menu li:not(:last-child) {
-	margin-right: 30px;
+.nav__menu a {
+	margin: 0 15px;
 }
 
-.nav__submenu {
-	display: none;
-	list-style: none;
-	padding: 10px;
-	background-color: whitesmoke;
-	position: absolute;
-	min-width: 150px;
-	transform: translateY(5px);
-}
-
-.nav__menu li:first-child:hover .nav__submenu  {
+.nav__menu li:first-child:hover > .nav__submenu  {
 	display: block;
 }
 
@@ -125,10 +119,208 @@ margin-top: 416px;
 .nav__link {
 	font-weight: bold;
 	text-decoration: none;
-	border-bottom: 1px solid rgba(189, 253, 253, 0.5);
+	border-bottom: 1px solid rgba(189, 253, 253, 0.2);
 	color: white;
+	font-size: 16px;
 }
 
+.nav__link:hover{
+	background: #F7F6F3;
+	color:#323232;
+	border-radius: 20px;
+	padding: 5px 15px;
+	margin: 0;
+}
+
+.nav__submenu {
+	display: none;
+	list-style: none;
+	padding: 0;
+	background-color: whitesmoke;
+	position: absolute;
+	min-width: 140px;
+	transform: translate(2px, 10px);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.nav__submenu a {
+	display: inline-block;
+	font-size: 14px;
+	padding: 5px 0;
+	padding-left: 15px;
+	width: 80%;
+	color: black;
+	text-decoration: none;
+	margin: 0;
+}
+
+.nav__submenu li:not(:first-child):hover {
+	background: #FBDED8;
+}
+
+.nav__submenu li:first-child {
+	font-weight: bold;
+	padding-bottom: 19px;
+	margin: 0 5px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav__submenu li:first-child a {
+	padding-left: 10px;
+}
+
+/*Стилизация кнопок и контактов в хедере*/
+
+.header__interactive {
+	width: 30%;
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+	color:white;
+	font-weight: bold;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.header__interactive button {
+	color:white;
+	font-weight: 500;
+	margin: 0 5px;
+}
+
+.search {
+	position: relative;
+}
+
+.search__btn {
+	width: 35px;
+	height: 35px;
+	background: rgba(255, 255, 255, 0.2) url("../img/svg/loupe.svg") center no-repeat;
+	border-radius: 50%;
+	outline: none;
+	border:none;
+}
+
+.search__btn:hover {
+	background-image: url("../img/svg/loupe_black.svg");
+}
+
+.search:hover .search__form {
+	display: block;
+}
+
+.search__form {
+padding: 20px 15px;
+background: #F8F7F4;
+box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+position: absolute;
+border-radius: 5px;
+top: 40px;
+left: -300px;
+}
+
+input[type="search"] {
+	color: #999999;
+	width: 314px;
+	padding: 10px;
+}
+
+.login__btn {
+	outline: none;
+	border:none;
+	border-radius: 20px;
+	padding: 9px 18px;
+	padding-left: 45px;
+	background: url("../img/svg/entrance_white.svg") 15px center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.login__btn:hover {
+	background-image: url("../img/svg/entrance.svg");
+	color: black;
+}
+
+.login {
+	position: relative;
+}
+
+.login:hover .login__form {
+	display: block;
+}
+
+
+.login__form button {
+	background: linear-gradient(0deg, #E74A35 0%, #F26843 100%), #E84D37;
+	box-shadow: 0px 1px 2px #AC1000;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 24px;
+	color: #FEFEFE;
+	float: left;
+	padding: 10px 20px;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+	font-style: normal;
+}
+
+.login__form {
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	padding: 20px 17px;
+	background: #F8F7F4;
+	box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
+	border-radius: 5px; 
+}
+
+.login__form input {
+	font-size:14px;
+	padding: 10px;
+	width: 244px;
+
+}
+
+.login__form a {
+	display: inline-block;
+	color: #323232;
+	font-size: 13px;
+	float: right;
+	line-height: 16px;
+	margin-bottom: 5px;
+	font-weight: normal;
+}
+
+.cart__btn {
+	outline: none;
+	border:none;
+	border-radius: 20px;
+	padding: 9px 18px;
+	padding-left: 45px;
+	background: url("../img/svg/basket.svg") 15px center no-repeat;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.header__contacts {
+	text-align: right;
+	font-weight: bold;
+
+}
+.header__time {
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.header__tel {
+	font-size: 22px;
+	text-decoration: none;
+	color: white;
+	letter-spacing: 1px;
+}
+
+
+/*Служебные стили*/
 .visually__hidden {
   position: absolute;
   width: 1px;
@@ -140,7 +332,12 @@ margin-top: 416px;
   overflow: hidden;
 }
 
-:focus {
-box-shadow: 0 0 10px red;
-
+.search__form,
+.login__form {
+	display: none;
 }
+
+.visible {
+	display: block;
+}
+

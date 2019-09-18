@@ -7,10 +7,11 @@
 	  	<meta charset="utf-8">
 	  	<meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>HTML Academy: Главная страница интернет-магазина мороженного Глэйси</title>
-	    <script async src="js/js_main.js"></script>
-	    <link rel="stylesheet" href="css/main_css.css" type="text/css"/>
-	    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-
+	    
+	    
+	    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css"/>
+	    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet" rel="stylesheet">
+		<link rel="stylesheet" href="css/main_css.css" type="text/css"/>
  	</head>
 
 	<body id="main" class="first__theme">
@@ -18,7 +19,7 @@
 		<header class="header">
 
 			<div class="header__logo">
-				<img src="img/svg/logo.svg" width="154" height="64"  alt="Гототип Глэйси">
+				<img src="img/svg/logo.svg" width="154" height="64"  alt="Лототип Глэйси">
 			</div>
 
 			<nav class="header__nav">
@@ -26,6 +27,7 @@
 				<ul class="nav__menu" aria-label="Основная навигация">
 					<li>
 						<a href="" class="nav__link">Каталог</a>
+
 						<ul class="nav__submenu">
 							<li>
 								<a href="">Новинки</a>
@@ -63,9 +65,9 @@
 		    <div class="header__interactive">
 
 				<div class="search">
-					<button class="search__btn" type="submit">Поиск</button>
+					<button class="search__btn" type="submit"></button>
 					<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
-						<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="Поиск">
+						<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="search">
 					</form>
 				</div>
 				
@@ -76,7 +78,7 @@
 							<input id="login__email" name="Email" type="email" placeholder="email@example.com" aria-label="Почта">
 						</p>
 						<p>
-							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="Пароль">
+							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="password">
 						</p>	
 						<button>Войти</button>
 						<a href="">Забыли пароль?</a>
@@ -89,7 +91,7 @@
 				</div>
 
 				<div class="header__contacts">
-					<div class="header__time">c 10 до 20, ежедневно</div>
+					<p class="header__time">c 10 до 20, ежедневно</p>
 					<a href="tel: +78124502525" class="header__tel">8 812 450-25-25</a>
 				</div>
 
@@ -207,7 +209,7 @@
 				<h2 class="visually__hidden">Контакты</h2>
 
 				<div class="map">
-					<img class="location map" src="img/bg_map.jpg" alt="Схема проезда">
+					<img class="location map" src="img/bg_map.jpg" alt="Схема проезда: ул. Большая Конюшенная 19/8, Санкт-Петербург">
 					<img class="map__marker" src="img/svg/pin.svg">
 				</div>
 
@@ -220,7 +222,7 @@
 
 					<div class="tel">
 						<p>Для заказов по телефону:
-							<span>8 812 450-25-25</span>
+							<a href="tel: +78124502525" class="header__tel">8 812 450-25-25</a>
 							<span>(с 10 до 20 ежедневно)</span>
 						</p>
 					</div>
@@ -233,15 +235,15 @@
 						<button class="close__btn" aria-label="Закрыть">X</button>
 
 						<p>
-							<input type="text" id="feedback__user__name" name="Имя пользователя" placeholder="Имя Фамилия" aria-label="ФИО">
+							<input type="text" id="feedback__user__name" name="user__name" placeholder="Имя Фамилия" aria-label="ФИО">
 						</p>
 
 						<p>
-							<input type="email" id="feedback__email" name="Еmail" placeholder="email@example.com" aria-label="Ваша почта">
+							<input type="email" id="feedback__email" name="email" placeholder="email@example.com" aria-label="Ваша почта">
 						</p>
 
 						<p>
-							<input type="text" id="feedback_message" name="Сообщение" placeholder="В свободной форме" aria-label="Ваше сообщение в свободной форме">
+							<input type="text" id="feedback_message" name="message" placeholder="В свободной форме" aria-label="Ваше сообщение в свободной форме">
 						</p>
 
 						<button type="submit">Отправить</button>
@@ -298,6 +300,7 @@
 
 		</footer>
 
+		<script async src="js/js_main.js"></script>
 	</body>
 
 </html>
