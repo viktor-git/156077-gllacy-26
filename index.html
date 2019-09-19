@@ -66,24 +66,28 @@
 
 				<div class="search">
 					<button class="search__btn" type="submit"></button>
-					<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
-						<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="search">
-					</form>
+					<div class="search__container">
+						<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
+							<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="search">
+						</form>
+					</div>
 				</div>
 				
 				<div class="login">
 					<button class="login__btn">Вход</button>
-					<form class="login__form" method="post" action="https://echo.htmlacademy.ru" name="login__form" aria-label="Форма входа">	
-						<p>		
-							<input id="login__email" name="Email" type="email" placeholder="email@example.com" aria-label="Почта">
-						</p>
-						<p>
-							<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="password">
-						</p>	
-						<button>Войти</button>
-						<a href="">Забыли пароль?</a>
-						<a href="">Новая регистрация</a>
-					</form>
+					<div class="login__container">
+						<form class="login__form" method="post" action="https://echo.htmlacademy.ru" name="login__form" aria-label="Форма входа">
+							<p>		
+								<input id="login__email" autocomplete="off" name="Email" type="email" placeholder="email@example.com" aria-label="Почта">
+							</p>
+							<p>
+								<input id="login__password" type="password" placeholder="*********" aria-label="Пароль" name="password">
+							</p>	
+							<button>Войти</button>
+							<a href="">Забыли пароль?</a>
+							<a href="">Новая регистрация</a>
+						</form>
+					</div>	
 				</div>
 				
 				<div class="cart">

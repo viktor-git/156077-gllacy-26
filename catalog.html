@@ -7,9 +7,10 @@
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>HTML Academy: Каталог интернет-магазина мороженного Глэйси</title>
-	    <script async src="js/js_main.js"></script>
-	    <link rel="stylesheet" href="css/main_css.css" type="text/css"/>
+	  
+	    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css"/>
 	    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=cyrillic" rel="stylesheet" rel="stylesheet">
+		<link rel="stylesheet" href="css/main_css.css" type="text/css"/>
 
 	</head>
 
@@ -23,10 +24,10 @@
 				</a>
 			</div>
 
-			<nav class="header__nav">
+			<nav class="header__nav" aria-label="Основная навигация">
 
 				<ul class="nav__menu">
-					<li>
+					<li class="nav__item">
 						<a href="" class="nav__link">Каталог</a>					
 						<ul class="nav__submenu">
 							<li>
@@ -51,11 +52,11 @@
 						</ul>
 					</li>
 
-					<li>
+					<li class="nav__item">
 						<a href="" class="nav__link">Доставка и оплата</a>
 					</li>
 
-					<li>
+					<li class="nav__item">
 						<a href="" class="nav__link">О компании</a>
 					</li>
 				</ul>
@@ -65,7 +66,7 @@
 		    <div class="header__interactive">
 
 				<div class="search">
-					<button class="search__btn" type="submit">Поиск</button>
+					<button class="search__btn" type="submit"></button>
 					<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
 						<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="search">
 					</form>
@@ -351,6 +352,8 @@
 			</div>
 
 		</footer>
+
+  		<script async src="js/js_main.js"></script>
 
 	 </body>
 
