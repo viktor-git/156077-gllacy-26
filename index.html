@@ -66,7 +66,7 @@
 
 				<div class="search">
 					<button class="search__btn" type="submit"></button>
-					<div class="search__container">
+					<div class="hover__container">
 						<form class="search__form" method="post" action="https://echo.htmlacademy.ru">
 							<input type="search" placeholder="Крем-брюле" aria-label="Поиск" name="search">
 						</form>
@@ -75,7 +75,7 @@
 				
 				<div class="login">
 					<button class="login__btn">Вход</button>
-					<div class="login__container">
+					<div class="hover__container">
 						<form class="login__form" method="post" action="https://echo.htmlacademy.ru" name="login__form" aria-label="Форма входа">
 							<p>		
 								<input id="login__email" autocomplete="off" name="Email" type="email" placeholder="email@example.com" aria-label="Почта">
@@ -117,11 +117,22 @@
 
 				<div class="slider__active">
 					<div class="slider__scroll">
-							<input type="radio" name="slider__scroll" class="first" checked="checked">  
-							<input type="radio" name="slider__scroll" class="second">  
-							<input type="radio" name="slider__scroll" class="third">   
+						<div class="radio__style">
+							<input type="radio" name="slider__scroll" id="slider__scroll__first" class="first visually__hidden" checked="checked">
+							<label for="slider__scroll__first"></label>  
+						</div>
+
+						<div class="radio__style">
+							<input type="radio" name="slider__scroll" id="slider__scroll__second" class="second visually__hidden">
+							<label for="slider__scroll__second"></label> 
+						</div> 
+
+						<div class="radio__style">
+							<input type="radio" name="slider__scroll" id="slider__scroll__third" class="third visually__hidden"> 
+							<label for="slider__scroll__third"></label> 
+						</div> 
 					</div>	
-			 		<a href="" class="slider__action">Давайте оба!</a>
+			 		<button href="" class="slider__action">Давайте оба!</button>
 		 		</div>
 
 			</section> 
@@ -151,25 +162,33 @@
 				<div class="hit__item">
 					<img class="hit__item__image" src="img/cream_orange.png" width="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 					<div class="item__price">310 &#8381;<span>/кг</span></div>
-					<h3 class="item__title">Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
+					<h3 class="item__title">
+						<a>Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+					</h3>
 				</div>
 
 				<div class="hit__item">				
 					<img class="hit__item__image" src="img/cream_coffee.png" width="267" alt="Сливочно-кофейное с кусочками шоколада">
 					<div class="item__price">380 &#8381;<span>/кг</span></div>
-					<h3 class="item__title">Сливочно-кофейное с кусочками шоколада</h3>
+					<h3 class="item__title">
+						<a>Сливочно-кофейное с кусочками шоколада</a>
+					</h3>
 				</div>
 
 				<div class="hit__item">
 					<img class="hit__item__image" src="img/cream_straw.png" width="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 					<div class="item__price">355 &#8381;<span>/кг</span></div>
-					<h3 class="item__title">Сливочно-клубничное с присыпкой из белого шоколада</h3>
+					<h3 class="item__title">
+						<a>Сливочно-клубничное с присыпкой из белого шоколада</a>
+					</h3>
 				</div>
 
 				<div class="hit__item">
 					<img class="hit__item__image" src="img/creme_brulee_caram.png" alt="Сливочное крем-брюле с карамельной подливкой">
 					<div class="item__price">415 &#8381;<span>/кг</span></div>
-					<h3 class="item__title">Сливочное крем-брюле с карамельной подливкой</h3>
+					<h3 class="item__title">
+						<a>Сливочное крем-брюле с карамельной подливкой</a>
+					</h3>
 				</div>
 
 			</section>
