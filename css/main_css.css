@@ -10,8 +10,8 @@ body {
 }
 
 .header {
-	width: 1159px;
 	display: flex;
+	min-width: 1159px;
 	min-height: 118px;
 	margin: 0 auto;
 }
@@ -27,7 +27,7 @@ body {
 	            url("../img/ice_cream_2.png") calc(50% + 155px) 147px no-repeat, 
 	            url("../img/bg_theme_1.png") center 1px no-repeat;
 	-webkit-background-size: 364px, 325px, 100%;
-	background-size: 364px, 325px, 100%;
+	background-size: 364px, 325px, 50%;
 	background-color: #849D8F;
 }
 
@@ -57,14 +57,13 @@ body {
 }
 
 .slider__scroll {
-	width: 480px;
+	min-width: 460px;
+	display: flex;
 }
 
 .slider__main {
-	position: relative;
-	top: -135px;
-	margin-bottom: -80px;
-	margin-top: 416px;
+	margin-top: 285px;
+	margin-bottom: 20px;
 }
 
 .slider__title {
@@ -88,29 +87,19 @@ body {
 .slider__active {
 	display: flex;
     align-items: baseline;
-}
-
-/*
-.radio__style input[type=radio] {
-	display: none;
-}
-*/
-
-.radio__style {
-	display: inline-block;
+    margin-left: 20px;
 }
 
 .radio__style label {
 	cursor: pointer;
 	position: relative;
-	margin-right: 25px;
+	margin-right: 32px;
 }
 
 .radio__style label::before {
 	content: "";
-	display: inline-block;
-	width: 20px;
-	height: 20px;
+	width: 21px;
+	height: 21px;
 	position: absolute;
 	left: 0;
 	bottom: 1px;
@@ -139,6 +128,7 @@ body {
 
 .nav__menu {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 0;
 	margin-top: 10px; 
 	margin-left: 10px;
@@ -150,7 +140,7 @@ body {
 	padding: 5px 15px;
 }
 
-.nav__menu .nav__item:first-child:hover .nav__submenu  {
+.nav__item:first-child:hover .nav__submenu  {
 	display: block;
 }
 
@@ -180,7 +170,7 @@ body {
 }
 
 .nav__menu li:hover .nav__link {
-		color:#323232;
+	color:#323232;
 }
 
 .nav__submenu {
@@ -337,11 +327,12 @@ input[type="search"] {
 }
 
 .login__form input {
-	width: 244px;
+	min-width: 244px;
 }
 
 .login__form a {
 	display: inline-block;
+	vertical-align: top;
 	color: #323232;
 	font-size: 13px;
 	float: right;
@@ -352,7 +343,7 @@ input[type="search"] {
 
 .cart__btn {
 	outline: none;
-	border:none;
+	border: none;
 	border-radius: 20px;
 	padding: 9px 18px;
 	padding-left: 45px;
@@ -441,15 +432,67 @@ input[type="search"] {
 }
 .header__time {
 	margin: 0;
-	letter-spacing: 1px;
 }
 
 a.header__tel {
 	font-size: 22px;
 	text-decoration: none;
 	color: white;
-	letter-spacing: 1px;
 }
+
+/*Стилизация спец. предлоений*/
+
+.special__offers {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+
+.special__offer {
+	background-color: #849D8F;
+	font-weight: bold;
+	padding: 20px;
+	border-radius: 20px;
+	flex-basis: 554px;
+}
+
+.special__offer.crimson {
+	background: url("../img/bg_crimson.jpg") center no-repeat;
+}
+
+.special__offer.choco {
+	background: url("../img/bg_choco.jpg") center no-repeat;
+}
+
+.offer__title {
+	font-size: 35px;
+	line-height: 41px;
+	color: #fff;
+}
+
+.offer__descr {
+	font-size: 18px;
+	line-height: 22px;
+	color: #fff;
+	margin-bottom: 40px;
+	text-align: justify;
+	margin-right: 20px;
+}
+
+.offer__link {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 24px;
+	color: #fff;
+	background: linear-gradient(0deg, #E74A35 0%, #F26843 100%);
+	box-shadow: 0px 2px 2px rgba(172, 16, 0, 0.64);
+	padding: 10px 24px;
+	border-radius: 20px;
+	float: right;
+}
+
+/*Стилизация хитов*/
 
 
 /*Служебные и общие стили*/
@@ -481,7 +524,8 @@ a:active:not(.header__nav) {
 
 .slider__action:hover,
 .login__form button:hover,
-.cart .place__order:hover {
+.cart .place__order:hover,
+a.offer__link:hover {
 	color: #FEFEFE;
 	background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(0deg, #E74A35 0%, #F26843 100%);
 	box-shadow: 0px 2px 2px #AC1000;
@@ -490,9 +534,11 @@ a:active:not(.header__nav) {
 
 .slider__action:active,
 .login__form button:active,
-.cart .place__order:active {
+.cart .place__order:active,
+a.offer__link:active {
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(0deg, #F26843 0%, #E74A35 100%);
 	box-shadow: inset 0px 2px 2px #942718;
+	color: #FEFEFE;
 }
 
 .hover__container {
