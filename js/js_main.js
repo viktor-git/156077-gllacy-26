@@ -1,8 +1,9 @@
 "use strict";
 
+//Стилизация главной
 main.addEventListener ('click', function (evt) {
 	let text = document.querySelector('.slider__title p');
-	let feedBack = document.querySelector('.feedback__form__container');
+	let feedBack = document.querySelector('.modal__container');
 	let overlay = document.createElement('div');
 	overlay.classList.add('overlay');
 	
@@ -31,20 +32,48 @@ main.addEventListener ('click', function (evt) {
 
 	if (target.classList.contains('feedback')) {
 		feedBack.style.display = 'block';
-		let rect = feedBack.getBoundingClientRect();
-		feedBack.style.left = main.clientWidth / 3 + 'px';
-		feedBack.style.top =  rect.height - rect.y - 200 + 'px';
 		main.prepend(overlay);
 
 	}
 
 	if (target.className === 'close__btn') {
 		feedBack.style.display = 'none';
-		feedBack.style.top	= '0px';
 		document.querySelector('.overlay').remove();
 	}
 
 });
 
+//Интерактивная карта
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            //center: [59.939148, 30.322700],
+            center: [59.938631, 30.323055],
+            zoom: 19
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
 
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
 
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'Глэйси',
+            balloonContent: 'Глэйси'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/svg/pin.svg',
+            // Размеры метки.
+            iconImageSize: [80, 140],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            //iconImageOffset: [-5, -38]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+});

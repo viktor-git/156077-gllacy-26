@@ -233,11 +233,8 @@
 			<section class="contacts">
 				
 				<h2 class="visually__hidden">Контакты</h2>
-
-				<div class="map">
-					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5b6a26b2779bf8028b883beba96a34a92729f3686d57f1be1c5b80eefd5eaabd&amp;source=constructor" width="1250" height="556" frameborder="0"></iframe>
-					<img class="map__marker visually__hidden" src="img/svg/pin.svg" width="80" height="140">
-				</div>
+				
+				<div id="map"></div>
 
 				<div class="contact__info">
 					<div class="adress">
@@ -253,29 +250,6 @@
 					</div>
 					<button class="feedback btn">Форма обратной связи</button>
 				</div>
-
-					<div class="feedback__form__container">
-						<form  class="feedback__form clearfix" method="post" action="https://echo.htmlacademy.ru" aria-label="Форма обратной связи">
-						
-							<p>Мы обязательно Вам ответим!</p>
-
-							<button type="button" class="close__btn" aria-label="Закрыть"></button>
-
-							<label for="feedback__user__name">
-								<input type="text" id="feedback__user__name" name="user__name" placeholder="Имя Фамилия" aria-label="ФИО">
-							</label>
-
-							<label for="feedback__email">
-								<input type="email" id="feedback__email" name="email" placeholder="email@example.com" aria-label="Ваша почта">
-							</label>
-
-							<label for="feedback__message">
-								<textarea id="feedback__message" name="message" placeholder="В свободной форме" aria-label="Ваше сообщение в свободной форме"></textarea>
-							</label>
-
-							<button type="submit" class="btn">Отправить</button>
-						</form>	
-					</div>
 
 			</section>
 
@@ -325,6 +299,29 @@
 
 		</footer>
 
+		<div class="modal__container">
+						<form  class="modal__feedback__form clearfix" method="post" action="https://echo.htmlacademy.ru" aria-label="Форма обратной связи">
+						
+							<p>Мы обязательно Вам ответим!</p>
+
+							<button type="button" class="close__btn" aria-label="Закрыть"></button>
+
+							<label for="feedback__user__name">
+								<input type="text" id="feedback__user__name" name="user__name" placeholder="Имя Фамилия" aria-label="ФИО">
+							</label>
+
+							<label for="feedback__email ">
+								<input type="email" id="feedback__email" name="email" placeholder="email@example.com" aria-label="Ваша почта" required>
+							</label>
+
+							<label for="feedback__message">
+								<textarea id="feedback__message" name="message" placeholder="В свободной форме" aria-label="Ваше сообщение в свободной форме" required></textarea>
+							</label>
+
+							<button type="submit" class="btn">Отправить</button>
+						</form>	
+					</div>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3981dcaa-d3d2-415c-9908-d43e05d25f98" type="text/javascript"></script>
 		<script async src="js/js_main.js"></script>
 	</body>
 
