@@ -1,79 +1,98 @@
 "use strict";
 
 //Стилизация главной
-main.addEventListener ('click', function (evt) {
-	let text = document.querySelector('.slider__title p');
-	let feedBack = document.querySelector('.modal__container');
-	let overlay = document.createElement('div');
-	overlay.classList.add('overlay');
 	
-	overlay.style.height = document.documentElement.scrollHeight + 'px';
-	let target = evt.target;
-	console.log(target);
+main.addEventListener ('click', function (evt) {
+	var target = evt.target;
+	var text = document.querySelector('.slider__title p');
 
-	if (target.id === 'slider__scroll__first') {
-			main.classList.remove('second__theme');
-			main.classList.remove('third__theme');
-			main.classList.add('first__theme');
-			text.textContent = 'Крем-брюле и пломбир с малиновым джемом';
-	}
+		if (target.id === 'slider__scroll__first') {
+				main.classList.remove('second__theme');
+				main.classList.remove('third__theme');
+				main.classList.add('first__theme');
+				text.textContent = 'Крем-брюле и пломбир с малиновым джемом';
+		}
 
-	if (target.id === 'slider__scroll__second') {
-			main.classList.remove('third__theme');
-			main.classList.add('second__theme');
-			text.textContent = 'Шоколадный пломбир и лимонный сорбет';
-	}
+		if (target.id === 'slider__scroll__second') {
+				main.classList.remove('third__theme');
+				main.classList.add('second__theme');
+				text.textContent = 'Шоколадный пломбир и лимонный сорбет';
+		}
 
-	if (target.id === 'slider__scroll__third') {
-			main.classList.remove('second__theme');
-			main.classList.add('third__theme');
-			text.textContent = 'Пломбир с помадкой и клубничный щербет';
-	}
-
-	if (target.classList.contains('feedback')) {
-		feedBack.style.display = 'block';
-		main.prepend(overlay);
-
-	}
-
-	if (target.className === 'close__btn') {
-		feedBack.style.display = 'none';
-		document.querySelector('.overlay').remove();
-	}
+		if (target.id === 'slider__scroll__third') {
+				main.classList.remove('second__theme');
+				main.classList.add('third__theme');
+				text.textContent = 'Пломбир с помадкой и клубничный щербет';
+		}
 
 });
 
-//Интерактивная карта
-ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            //center: [59.939148, 30.322700],
-            center: [59.938631, 30.323055],
-            zoom: 19
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
 
-        // Создаём макет содержимого.
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-        ),
+var feedBack = document.querySelector('.modal__container');
+	if (feedBack) {
+			var modalFeedForm = feedBack.querySelector('.modal__feedback__form');
+			var feedEmail = modalFeedForm.querySelector('input[name=email]');
+			var feedMessage = modalFeedForm.querySelector('textarea[name=message]');
+	}
 
-        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-            hintContent: 'Глэйси',
-            balloonContent: 'Глэйси'
-        }, {
-            // Опции.
-            // Необходимо указать данный тип макета.
-            iconLayout: 'default#image',
-            // Своё изображение иконки метки.
-            iconImageHref: '../img/svg/pin.svg',
-            // Размеры метки.
-            iconImageSize: [80, 140],
-            // Смещение левого верхнего угла иконки относительно
-            // её "ножки" (точки привязки).
-            //iconImageOffset: [-5, -38]
-        });
+main.addEventListener('click', function (evt) {
+	var target = evt.target;
 
-    myMap.geoObjects
-        .add(myPlacemark)
+		if (target.classList.contains('feedback')) {
+				var overlay = document.createElement('div');
+				overlay.classList.add('overlay');
+				overlay.style.height = document.documentElement.scrollHeight + 'px';
+				overlay.style.width = document.documentElement.clientWidth + 'px';
+				feedBack.classList.add('modal__show');
+				main.prepend(overlay);
+				feedback__user__name.focus();
+		}
+
+		if (target.className === 'close__btn' || target.className === 'overlay') {
+				feedBack.querySelector('.modal__feedback__form').classList.remove('err__trigger');
+				feedBack.querySelector('input[name=email]').classList.remove('form__err');
+				feedBack.querySelector('textarea[name=message]').classList.remove('form__err');
+				feedBack.classList.remove("modal__show");
+				document.querySelector('.overlay').remove();
+			
+		}
+});
+
+window.addEventListener("keydown", function (evt) {
+    if (evt.keyCode === 27) {
+	    	evt.preventDefault();
+
+		    if (feedBack.classList.contains("modal__show")) {
+						feedBack.querySelector('.modal__feedback__form').classList.remove('err__trigger');
+						feedBack.querySelector('input[name=email]').classList.remove('form__err');
+						feedBack.querySelector('textarea[name=message]').classList.remove('form__err');
+						feedBack.classList.remove("modal__show");
+						document.querySelector('.overlay').remove();
+      		}
+    }  
+});
+
+if (modalFeedForm) {
+	modalFeedForm.addEventListener('submit', function (evt) {
+
+		if (!feedEmail.value || !feedMessage.value) {
+				evt.preventDefault();
+				feedBack.classList.remove('err__trigger');
+				void feedBack.offsetWidth;
+				feedBack.classList.add('err__trigger');
+				(!feedEmail.value) ? feedEmail.classList.add('form__err') : feedEmail.classList.remove('form__err');
+				(!feedMessage.value) ? feedMessage.classList.add('form__err') :  feedMessage.classList.remove('form__err');
+		}
+	});
+}
+
+var login = document.querySelector('.login__form');
+
+login.addEventListener('submit', function (evt) {
+
+	if (!login__email.value || !login__password.value) {
+			evt.preventDefault();
+			(!login__email.value) ? login__email.classList.add('form__err') : login__email.classList.remove('form__err');
+			(!login__password.value) ? login__password.classList.add('form__err') :  login__password.classList.remove('form__err');
+	}
 });

@@ -94,7 +94,7 @@
 
 				<div class="header__contacts">
 					<p class="header__time">c 10 до 20, ежедневно</p>
-					<a href="tel: +78124502525" class="header__tel">8 812 450-25-25</a>
+					<a href="tel:+78124502525" class="header__tel">8 812 450-25-25</a>
 				</div>
 
 			</div>
@@ -161,7 +161,7 @@
 					<img class="hit__item__image" src="img/cream_orange.png" width="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
 					<div class="item__price">310 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">
-						<a>Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+						<a href="">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
 					</h3>
 					<button class="fast__view btn">Быстрый просмотр</button>
 				</div>
@@ -170,7 +170,7 @@
 					<img class="hit__item__image" src="img/cream_coffee.png" width="267" alt="Сливочно-кофейное с кусочками шоколада">
 					<div class="item__price">380 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">
-						<a>Сливочно-кофейное с кусочками шоколада</a>
+						<a href="">Сливочно-кофейное с кусочками шоколада</a>
 					</h3>
 					<button class="fast__view btn">Быстрый просмотр</button>
 				</div>
@@ -179,7 +179,7 @@
 					<img class="hit__item__image" src="img/cream_straw.png" width="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
 					<div class="item__price">355 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">
-						<a>Сливочно-клубничное с присыпкой из белого шоколада</a>
+						<a href="">Сливочно-клубничное с присыпкой из белого шоколада</a>
 					</h3>
 					<button class="fast__view btn">Быстрый просмотр</button>
 				</div>
@@ -188,7 +188,7 @@
 					<img class="hit__item__image" src="img/creme_brulee_caram.png" alt="Сливочное крем-брюле с карамельной подливкой">
 					<div class="item__price">415 &#8381;<span>/кг</span></div>
 					<h3 class="item__title">
-						<a>Сливочное крем-брюле с карамельной подливкой</a>
+						<a href="">Сливочное крем-брюле с карамельной подливкой</a>
 					</h3>
 					<button class="fast__view btn">Быстрый просмотр</button>
 				</div>
@@ -233,7 +233,10 @@
 			<section class="contacts">
 				
 				<h2 class="visually__hidden">Контакты</h2>
-				
+
+				<div class="static__map">
+				</div>
+
 				<div id="map"></div>
 
 				<div class="contact__info">
@@ -244,7 +247,7 @@
 
 					<div class="tel">
 						<p>Для заказов по телефону:<br>
-							<a href="tel: +78124502525" class="header__tel">8 812 450-25-25</a><br>
+							<a href="tel:+78124502525" class="header__tel">8 812 450-25-25</a><br>
 							<span>(с 10 до 20 ежедневно)</span>
 						</p>
 					</div>
@@ -300,29 +303,30 @@
 		</footer>
 
 		<div class="modal__container">
-						<form  class="modal__feedback__form clearfix" method="post" action="https://echo.htmlacademy.ru" aria-label="Форма обратной связи">
-						
-							<p>Мы обязательно Вам ответим!</p>
+			<form  class="modal__feedback__form clearfix" method="post" action="https://echo.htmlacademy.ru" aria-label="Форма обратной связи">
+			
+				<p>Мы обязательно Вам ответим!</p>
 
-							<button type="button" class="close__btn" aria-label="Закрыть"></button>
+				<button type="button" class="close__btn" aria-label="Закрыть"></button>
 
-							<label for="feedback__user__name">
-								<input type="text" id="feedback__user__name" name="user__name" placeholder="Имя Фамилия" aria-label="ФИО">
-							</label>
+				<label for="feedback__user__name">
+					<input type="text" id="feedback__user__name" name="user__name" placeholder="Имя Фамилия" aria-label="ФИО">
+				</label>
 
-							<label for="feedback__email ">
-								<input type="email" id="feedback__email" name="email" placeholder="email@example.com" aria-label="Ваша почта" required>
-							</label>
+				<label for="feedback__email">
+					<input type="email" id="feedback__email" name="email" placeholder="email@example.com" aria-label="Ваша почта">
+				</label>
 
-							<label for="feedback__message">
-								<textarea id="feedback__message" name="message" placeholder="В свободной форме" aria-label="Ваше сообщение в свободной форме" required></textarea>
-							</label>
+				<label for="feedback__message">
+					<textarea id="feedback__message" name="message" placeholder="В свободной форме" aria-label="Ваше сообщение в свободной форме"></textarea>
+				</label>
 
-							<button type="submit" class="btn">Отправить</button>
-						</form>	
-					</div>
-		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3981dcaa-d3d2-415c-9908-d43e05d25f98" type="text/javascript"></script>
+				<button type="submit" class="btn">Отправить</button>
+			</form>	
+		</div>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=3981dcaa-d3d2-415c-9908-d43e05d25f98"></script>
 		<script async src="js/js_main.js"></script>
+		<script src="js/js_map_api.js"></script>
 	</body>
 
 </html>
