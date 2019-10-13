@@ -210,8 +210,7 @@ body {
     top: 40px;
     border-radius: 5px;
     background-color: whitesmoke;
-    padding-top: 20px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .nav__submenu li {
