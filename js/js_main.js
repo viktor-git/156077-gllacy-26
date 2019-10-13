@@ -37,8 +37,8 @@ var feedBack = document.querySelector('.modal__container');
 
 main.addEventListener('click', function (evt) {
 	var target = evt.target;
-
 		if (target.classList.contains('feedback')) {
+				evt.preventDefault();
 				var overlay = document.createElement('div');
 				overlay.classList.add('overlay');
 				overlay.style.height = document.documentElement.scrollHeight + 'px';
