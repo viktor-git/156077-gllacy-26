@@ -1,9 +1,10 @@
-"use strict";
+'use strict';
 
 //Стилизация главной
 	
 main.addEventListener ('click', function (evt) {
 	var target = evt.target;
+	console.log(target);
 	var text = document.querySelector('.slider__title p');
 
 		if (target.id === 'slider__scroll__first') {
@@ -52,21 +53,21 @@ main.addEventListener('click', function (evt) {
 				feedBack.querySelector('.modal__feedback__form').classList.remove('err__trigger');
 				feedBack.querySelector('input[name=email]').classList.remove('form__err');
 				feedBack.querySelector('textarea[name=message]').classList.remove('form__err');
-				feedBack.classList.remove("modal__show");
+				feedBack.classList.remove('modal__show');
 				document.querySelector('.overlay').remove();
 			
 		}
 });
 
-window.addEventListener("keydown", function (evt) {
+window.addEventListener('keydown', function (evt) {
     if (evt.keyCode === 27) {
 	    	evt.preventDefault();
 
-		    if (feedBack.classList.contains("modal__show")) {
+		    if (feedBack.classList.contains('modal__show')) {
 						feedBack.querySelector('.modal__feedback__form').classList.remove('err__trigger');
 						feedBack.querySelector('input[name=email]').classList.remove('form__err');
 						feedBack.querySelector('textarea[name=message]').classList.remove('form__err');
-						feedBack.classList.remove("modal__show");
+						feedBack.classList.remove('modal__show');
 						document.querySelector('.overlay').remove();
       		}
     }  

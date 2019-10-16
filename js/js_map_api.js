@@ -22,12 +22,12 @@ ymaps.ready(function () {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/svg/pin.svg',
+            iconImageHref: 'img/svg/pin.svg',
             // Размеры метки.
             iconImageSize: [80, 140],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            //iconImageOffset: [-5, -38]
+            iconImageOffset: [-5, -38]
         });
 
     myMap.geoObjects
