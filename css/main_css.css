@@ -279,8 +279,11 @@ body {
     background: #F6B5A5;
 }
 
-.submenu__item__active a {
+.submenu__item__active {
     background: #D07058;
+}
+
+.submenu__item__active a {
     color: white;
 }
 
@@ -340,7 +343,6 @@ ul.nav__menu  a:hover {
 .breadcrumbs li:not(:last-child) {
     margin-right: 20px;
 }
-
 
 /*Стилизация кнопок и контактов в хедере*/
 
@@ -588,6 +590,10 @@ ul.nav__menu  a:hover {
  	padding: 10px 15px;
 }
 
+.place__order:hover {
+    color: #FFFFFF;
+}
+
 .header__contacts {
     text-align: right;
     font-weight: bold;
@@ -604,9 +610,6 @@ a.header__tel {
     margin-top: 10px;
 }
 
-a.header__tel:hover {
-    color: #FFBC9E;
-}
 /*Стилизация спец. предложений*/
 
 .special__offers {
@@ -1392,12 +1395,14 @@ a.header__tel:hover {
     margin-bottom: 3px;
 }
 
-.tel a {
+.tel .form__tel {
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
     color: #323232;
     display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .feedback.modal__send__btn {
@@ -1725,19 +1730,13 @@ img {
     height: auto;
 }
 
-.header a:not(.header__nav),
-.main a,
-.footer a {
+.link:not(.header__nav) {
     text-decoration: none;
     cursor: pointer;
 }
 
-.header a:hover,
-.main a:hover,
-.footer a:hover,
-.header a:active,
-.main a:active,
-.footer a:active {
+.link:hover,
+.link:active {
     color: #FFBC9E;
 }
 
