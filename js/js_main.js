@@ -97,3 +97,53 @@ login.addEventListener('submit', function (evt) {
 			(!login__password.value) ? login__password.classList.add('form__err') :  login__password.classList.remove('form__err');
 	}
 });
+
+//jQuery UI для фильтра цены
+$( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+
+//Фильтр по цене
+var handle = document.querySelectorAll('.ui-slider-handle');
+var itemsPrices = document.querySelectorAll('.item__price');
+
+var minPrice = Array.from(itemsPrices).sort( (a, b) => {
+	return parseInt(a.textContent) - parseInt(b.textContent);
+});
+
+var maxPrice = Array.from(itemsPrices).sort( (a, b) => {
+	return  parseInt(b.textContent) - parseInt(a.textContent);
+});
+
+var rangeMinVal = document.querySelector('.output__min');
+var rangeMaxVal = document.querySelector('.output__max');
+
+rangeMinVal.placeholder = parseInt( minPrice[0].textContent );
+rangeMaxVal.placeholder = parseInt( maxPrice[0].textContent );
+
+handle[0].addEventListener('mouseup', () => {
+	rangeMinVal.value = 500 * parseInt(handle[0].style.left) / 100;
+	if ( rangeMinVal.value < 100)  {
+		rangeMinVal.value = 100;
+	}
+});
+
+handle[1].addEventListener('mouseup', () => {
+	rangeMaxVal.value = 500 * parseInt(handle[1].style.left) / 100;
+	if ( rangeMaxVal.value < 100)  {
+		rangeMaxVal.value = 100;
+	}
+});
+
+                   
+	

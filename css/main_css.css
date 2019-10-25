@@ -707,6 +707,62 @@ a.header__tel {
     margin-right: 0;
 }
 
+.slider__box {
+    margin: 3px 0 7px;
+    padding: 18px 15px 17px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    min-width: 182px;
+}
+
+.ui-widget.ui-widget.ui-widget-content {
+   height: 4px;
+   background: rgba(255, 255, 255, 0.3);
+   border: none;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+    top: 50%;
+    height: 4px;
+    background: white;
+}
+
+.ui-slider-horizontal.ui-widget .ui-slider-handle {
+    top: -10px;
+    width: 1px;
+    height: 1px;
+    background: #ababab;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+    padding: 2px; 
+}
+
+.ui-slider-horizontal.ui-widget .ui-slider-handle:hover {
+    background: #1c4f80;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.output__min,
+.output__max {
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    width: 25px;
+}
+
+.output__min::-webkit-input-placeholder,
+.output__max::-webkit-input-placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+
 .range-controls {
     position: relative;
     margin: 7px 0;
@@ -752,6 +808,14 @@ a.header__tel {
 
 .range-toggle-max {
     left: 110px;
+}
+
+.price__filter .filter__container {
+    display: none;
+}
+
+.price__filter legend:nth-of-type(2) {
+    display: none;
 }
 
 .filters .filter__container {
@@ -1836,6 +1900,10 @@ img {
 	.log__static {
 	    width: 23%;
 	    margin: 0 auto;
-	    margin-bottom: 40px;    
+	    margin-bottom: 40px;   
+        z-index: -1; 
 	}
 }
+
+
+
