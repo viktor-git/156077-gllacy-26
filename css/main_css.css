@@ -231,7 +231,7 @@ body {
     top: 40px;
     border-radius: 5px;
     background-color: whitesmoke;
-    z-index: 1;
+    z-index: 2;
 }
 
 .nav__submenu li {
@@ -738,6 +738,7 @@ a.header__tel {
     box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
     cursor: pointer;
     padding: 2px; 
+    z-index: 1;
 }
 
 .ui-slider-horizontal.ui-widget .ui-slider-handle:hover {

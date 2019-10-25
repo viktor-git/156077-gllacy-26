@@ -100,7 +100,7 @@ login.addEventListener('submit', function (evt) {
 
 //jQuery UI для фильтра цены
 $( function() {
-    $( "#slider-range" ).slider({
+    $( "#slider__range" ).slider({
       range: true,
       min: 0,
       max: 500,
@@ -114,7 +114,7 @@ $( function() {
   } );
 
 //Фильтр по цене
-var handle = document.querySelectorAll('.ui-slider-handle');
+
 var itemsPrices = document.querySelectorAll('.item__price');
 
 var minPrice = Array.from(itemsPrices).sort( (a, b) => {
@@ -131,19 +131,29 @@ var rangeMaxVal = document.querySelector('.output__max');
 rangeMinVal.placeholder = parseInt( minPrice[0].textContent );
 rangeMaxVal.placeholder = parseInt( maxPrice[0].textContent );
 
-handle[0].addEventListener('mouseup', () => {
-	rangeMinVal.value = 500 * parseInt(handle[0].style.left) / 100;
-	if ( rangeMinVal.value < 100)  {
-		rangeMinVal.value = 100;
+slider__box.addEventListener('mouseup', (evt) => {
+
+		var target = evt.target;
+		var handle = document.querySelectorAll('.ui-slider-handle');
+		console.log( target.parentNode );
+		if ( target === handle[0] || target.id === 'slider__box' || target.id === 'slider__range' ) {
+
+		rangeMinVal.value = 500 * parseInt( handle[0].style.left ) / 100;
+
+		if ( rangeMinVal.value < 100)  {
+			rangeMinVal.value = 100;
+		};
+
+	}
+		if ( target === handle[1] || target.id === 'slider__box' || target.id === 'slider__range') {
+
+		rangeMaxVal.value = 500 * parseInt(handle[1].style.left) / 100;
+		if ( rangeMaxVal.value < 100)  {
+			rangeMaxVal.value = 100;
+		}
 	}
 });
 
-handle[1].addEventListener('mouseup', () => {
-	rangeMaxVal.value = 500 * parseInt(handle[1].style.left) / 100;
-	if ( rangeMaxVal.value < 100)  {
-		rangeMaxVal.value = 100;
-	}
-});
 
                    
 	
